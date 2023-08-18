@@ -13,9 +13,9 @@ function NavBar() {
   }
 
   return (
-    <div className="navbar bg-neutral text-neutral-content">
+    <div className="navbar fixed z-10 bg-neutral text-neutral-content">
         <div className="containerWrap flex justify-between">
-            <a className="btn btn-ghost normal-case text-xl">InstantChat</a>
+            <a className="btn btn-ghost normal-case text-xl">WorldChat</a>
             {currentUser ? <buttton className="cursor-pointer	" onClick={handleLogout}>Logout</buttton> : ""}
         </div>
     </div>
