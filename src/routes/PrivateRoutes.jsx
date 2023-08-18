@@ -1,7 +1,8 @@
 import { Navigate } from "react-router-dom";
+import { UserAuth } from "../context/AuthContexts";
 
 export const PrivateRoutes = ({children}) => {
-    const currentUser = false;
+    const {currentUser } = UserAuth();
 
     if(!currentUser) {
         return <Navigate to="/" replace={true} />
