@@ -1,10 +1,13 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { config } from 'dotenv'; // Changed 'require' to 'import'
+
+config(); // Load environment variables from the .env file
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAINsm-Ka1lDd0NjdHjNS6rFG2dhdMyiUY",
+  apiKey: process.env.API_KEY, // Corrected the environment variable name
   authDomain: "chatapp-5a937.firebaseapp.com",
   projectId: "chatapp-5a937",
   storageBucket: "chatapp-5a937.appspot.com",
